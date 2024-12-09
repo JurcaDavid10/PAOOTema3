@@ -145,12 +145,12 @@ int main() {
         // Vector de fire
         std::vector<std::thread> clienti;
 
-        // Simulăm mai mulți clienți care adaugă bani în conturile lor
+        // Simulam mai multi clienti care adauga bani in conturile lor
         clienti.emplace_back(adaugaSumaLaCoada, cont, 0, 100.50, 1); // Clientul 1
         clienti.emplace_back(adaugaSumaLaCoada, cont, 0, 200.75, 2); // Clientul 2
         clienti.emplace_back(adaugaSumaLaCoada, cont, 1, 150.00, 3); // Clientul 3
 
-        // Așteptăm toate firele să termine
+        // Asteptam toate firele sa termine
         for (auto& t : clienti) {
             t.join();
         }
